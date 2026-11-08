@@ -1,6 +1,5 @@
 #include <fcntl.h>
 #include <netinet/in.h>
-#include <stddef.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -76,7 +75,6 @@ int main(void) {
     }
 
     printf("%s %s\n", method, path);
-
     if (strstr(path, "..") != NULL) {
       char *response = "HTTP/1.0 404 Not Found\r\n"
                        "Content-Type: text/html\r\n"
